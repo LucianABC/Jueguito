@@ -34,9 +34,9 @@ async function renderMap() {
             context.drawImage(imageTile, x * tileSize, y * tileSize);
         }
     }
-    context.drawImage(imageCharacter, 100, 100);
+    context.drawImage(imageCharacter, 70, 70);
     context.drawImage(imageBush, 150, 150);
-    
+    context.drawImage(imageSign, 140,15)
 }
 
 renderMap();
