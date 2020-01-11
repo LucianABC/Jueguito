@@ -69,7 +69,7 @@ class Engine {
     renderMap() {
         for (let y = 0; y <= this.mapSize.y; y++) {
             for (let x = 0; x <= this.mapSize.x; x++) {
-                context.drawImage(this.images.tile,
+                context.background.drawImage(this.images.tile,
                                   x * this.tileSize, 
                                   y * this.tileSize);
             }
@@ -77,16 +77,16 @@ class Engine {
     }
 
     renderEnvironment() {
-        this.context.drawImage(this.images.tree, 150, 150);
-        this.context.drawImage(this.images.poster, 150, 20);
+        this.context.foreground.drawImage(this.images.tree, 150, 150);
+        this.context.foreground.drawImage(this.images.poster, 150, 20);
     
         this.context.font = "12pt Helvetica";
         this.context.fillStyle = "white";
-        this.context.fillText("Bienvenidx!", 190, 45);
+        this.context.foreground.fillText("Bienvenidx!", 190, 45);
     }
 
     renderCharacter() {
-        this.context.drawImage(
+        this.context.foreground.drawImage(
             this.images.character,
             this.user.position.x,
             this.user.position.y
@@ -94,7 +94,7 @@ class Engine {
     }
     
     clearCanvas() {
-        this.context.clearRect(
+        this.context.foreground.clearRect(
             0,
             0,
             this.mapSize.x * this.tileSize,
@@ -124,9 +124,18 @@ class Engine {
                     break;
             }
             this.clearCanvas();
-            this.renderMap();
             this.renderCharacter();
             this.renderEnvironment();
         });
     }
 }
+
+const background = document.getElementById("background");
+const foreground = document.getElementById("foreground");
+
+const context = {
+    background: background.getContext("2d"),
+    foreground: foreground.getContext("2d")
+};
+
+const engine = new Engine(context);
