@@ -84,4 +84,49 @@ class Engine {
         this.context.fillStyle = "white";
         this.context.fillText("Bienvenidx!", 190, 45);
     }
+
+    renderCharacter() {
+        this.context.drawImage(
+            this.images.character,
+            this.user.position.x,
+            this.user.position.y
+        );
+    }
+    
+    clearCanvas() {
+        this.context.clearRect(
+            0,
+            0,
+            this.mapSize.x * this.tileSize,
+            this.mapSize.y * this.tileSize
+        );
+    }
+    initializeKeys() {
+        document.addEventListener("keydown", e => { //e.keyCode nos va a dar el numero de la tecla que presionemos
+            switch(e.keyCode){
+                case keys.arrowUp:
+                case keys.wUp:
+                    user.position.y -= tileSize;
+                break;
+                case keys.arrowDown:
+                case keys.sDown:
+                    user.position.y += tileSize;
+                    break;
+                case keys.arrowLeft:
+                case keys.aLeft:
+                    user.position.x -= tileSize;
+                    break;
+                case keys.arrowRight:
+                case keys.dRight:
+                    user.position.x += tileSize;
+                    break;
+                default:
+                    break;
+            }
+            this.clearCanvas();
+            this.renderMap();
+            this.renderCharacter();
+            this.renderEnvironment();
+        });
+    }
 }
