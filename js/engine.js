@@ -58,7 +58,7 @@ class Engine {
     }
 
     async loadImages(){
-        for (let key of this.urls) {
+        for (let key in this.urls) {
             const url = this.urls[key];
 
             const image = await this.loadImage(url);
@@ -77,12 +77,12 @@ class Engine {
     }
 
     renderEnvironment() {
-        this.context.foreground.drawImage(this.images.tree, 150, 150);
-        this.context.foreground.drawImage(this.images.poster, 150, 20);
+        this.context.foreground.drawImage(this.images.bush, 150, 150);
+        this.context.foreground.drawImage(this.images.sign, 150, 20);
     
-        this.context.font = "12pt Helvetica";
-        this.context.fillStyle = "white";
-        this.context.foreground.fillText("Bienvenidx!", 190, 45);
+        this.context.foreground.font = "16pt Helvetica";
+        this.context.foreground.fillStyle = "white";
+        this.context.foreground.fillText("Bienvenidx!", 170, 65);
     }
 
     renderCharacter() {
@@ -104,21 +104,21 @@ class Engine {
     initializeKeys() {
         document.addEventListener("keydown", e => { //e.keyCode nos va a dar el numero de la tecla que presionemos
             switch(e.keyCode){
-                case keys.arrowUp:
-                case keys.wUp:
-                    user.position.y -= tileSize;
+                case this.keys.arrowUp:
+                case this.keys.wUp:
+                    this.user.position.y -= this.tileSize;
                 break;
-                case keys.arrowDown:
-                case keys.sDown:
-                    user.position.y += tileSize;
+                case this.keys.arrowDown:
+                case this.keys.sDown:
+                    this.user.position.y += this.tileSize;
                     break;
-                case keys.arrowLeft:
-                case keys.aLeft:
-                    user.position.x -= tileSize;
+                case this.keys.arrowLeft:
+                case this.keys.aLeft:
+                    this.user.position.x -= this.tileSize;
                     break;
-                case keys.arrowRight:
-                case keys.dRight:
-                    user.position.x += tileSize;
+                case this.keys.arrowRight:
+                case this.keys.dRight:
+                    this.user.position.x += this.tileSize;
                     break;
                 default:
                     break;
@@ -139,3 +139,4 @@ const context = {
 };
 
 const engine = new Engine(context);
+engine.initialize();
