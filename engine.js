@@ -65,4 +65,23 @@ class Engine {
             this.images[key]= image;
         }
     }
+
+    renderMap() {
+        for (let y = 0; y <= this.mapSize.y; y++) {
+            for (let x = 0; x <= this.mapSize.x; x++) {
+                context.drawImage(this.images.tile,
+                                  x * this.tileSize, 
+                                  y * this.tileSize);
+            }
+        }
+    }
+
+    renderEnvironment() {
+        this.context.drawImage(this.images.tree, 150, 150);
+        this.context.drawImage(this.images.poster, 150, 20);
+    
+        this.context.font = "12pt Helvetica";
+        this.context.fillStyle = "white";
+        this.context.fillText("Bienvenidx!", 190, 45);
+    }
 }
