@@ -27,7 +27,7 @@ class Engine {
         };
 
         this.urls= {
-            tile:"https://i.imgur.com/fqG34pO.png",
+            grass:"https://i.imgur.com/fqG34pO.png",
             character: "https://i.imgur.com/ucwvhlh.png",
             sign:"https://i.imgur.com/NXIjxr8.png",
             bush:"https://i.imgur.com/wIK2b9P.png",
@@ -66,10 +66,15 @@ class Engine {
         }
     }
 
-    renderMap() {
+   async renderMap() {
+        const response = await fetch("./maps/city.json");
+        const result = await response.json();
+        
+
         for (let y = 0; y <= this.mapSize.y; y++) {
             for (let x = 0; x <= this.mapSize.x; x++) {
-                context.background.drawImage(this.images.tile,
+                const tile = result[y][x];
+                context.background.drawImage(this.images[tile.background],
                                   x * this.tileSize, 
                                   y * this.tileSize);
             }
