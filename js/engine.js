@@ -31,6 +31,7 @@ class Engine {
             character: "https://i.imgur.com/ucwvhlh.png",
             sign:"https://i.imgur.com/NXIjxr8.png",
             bush:"https://i.imgur.com/wIK2b9P.png",
+            water:"https://i.imgur.com/4BZGw0M.png"
         } ; 
 
         this.images= {}
@@ -68,11 +69,10 @@ class Engine {
 
    async renderMap() {
         const response = await fetch("./maps/city.json");
-        const result = await response.json();
-        
+        const result = await response.json();      
 
-        for (let y = 0; y <= this.mapSize.y; y++) {
-            for (let x = 0; x <= this.mapSize.x; x++) {
+        for (let y = 0; y <= this.mapSize.y -1; y++) {
+            for (let x = 0; x <= this.mapSize.x -1; x++) {
                 const tile = result[y][x];
                 context.background.drawImage(this.images[tile.background],
                                   x * this.tileSize, 
