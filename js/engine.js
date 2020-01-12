@@ -21,9 +21,11 @@ class Engine {
 
         this.user = {
             position: {
-                x: 100,
-                y: 100
-            }
+                x: 0,
+                y: 0
+            },
+            height: 50,
+            width: 25
         };
 
         this.urls= {
@@ -112,71 +114,43 @@ class Engine {
     initializeKeys() {
         document.addEventListener("keydown", e => { //e.keyCode nos va a dar el numero de la tecla que presionemos
             switch(e.keyCode){
-                case this.keys.arrowUp:
-                    if (this.map[(Math.round(this.user.position.y / this.tileSize))-1][Math.round(this.user.position.x / this.tileSize)].block==false) {
-                        this.user.position.y -= this.tileSize;
-                    } else {
-                        this.user.position.y -= 0
-                    }
-                    break;
-                case this.keys.arrowDown:
-                    if (this.map[(Math.round(this.user.position.y / this.tileSize))+1][Math.round(this.user.position.x / this.tileSize)].block==false) {
-                        this.user.position.y += this.tileSize; 
-                    } else {
-                        this.user.position.y -= 0
-                    }
-                    break;
-                case this.keys.arrowLeft:
-                    if (this.map[Math.round(this.user.position.y / this.tileSize)][(Math.round(this.user.position.x / this.tileSize))-1].block==false) {
-                       
-                        this.user.position.x -= this.tileSize; 
-                    } else {
-                        this.user.position.x -= 0
-                    }
-                    break;
-                case this.keys.arrowRight:
-                    if (this.map[Math.round(this.user.position.y / this.tileSize)][(Math.round(this.user.position.x / this.tileSize))+1].block==false) {
-                        this.user.position.x += this.tileSize;
-                    } else {
-                        this.user.position.x -= 0
-                    }
-                    break;
-                default:
-                    break;/*
-                case this.keys.arrowUp:
                 case this.keys.wUp:  
-                    if (this.map[(this.user.position.y / this.tileSize - 1)][this.user.position.x / this.tileSize].block) {
-                        this.user.position.y -= 0;
-                    } else {
+                case this.keys.arrowUp:
+                    if (this.map[Math.round(this.user.position.y / this.tileSize - 1)][Math.round(this.user.position.x / this.tileSize)].block==false) {
                         this.user.position.y -= this.tileSize;
+                    } else {
+                        this.user.position.y -= 0
                     }
-                break;
+                    break;
                 case this.keys.arrowDown:
                 case this.keys.sDown:
-                    if (this.map[Math.round(this.user.position.y / this.tileSize + 1)][Math.round(this.user.position.x / this.tileSize)].block) {
-                        this.user.position.y += 0;
+                    if (this.map[Math.round(this.user.position.y / this.tileSize +1)][Math.round(this.user.position.x / this.tileSize)].block==false) {
+                    this.user.position.y +=  this.tileSize; /*
+                    } else if (this.map[(Math.round(this.user.position.y / this.tileSize) +2)][Math.round(this.user.position.x / this.tileSize)].block==true){
+                        this.user.position.y +=  this.tileSize - (this-this.user.height - this.tileSize); */
                     } else {
-                        this.user.position.y += this.tileSize;
+                        this.user.position.y -= 0
                     }
                     break;
-                case this.keys.arrowLeft:
                 case this.keys.aLeft:
-                    if (this.map[Math.round(this.user.position.y / this.tileSize)][Math.round(this.user.position.x / this.tileSize -1)].block) {
-                        this.user.position.x -= 0;
+                case this.keys.arrowLeft:
+                    if (this.map[Math.round(this.user.position.y / this.tileSize)][Math.round(this.user.position.x / this.tileSize -1)].block==false) {
+                       
+                        this.user.position.x -=  this.tileSize; 
                     } else {
-                        this.user.position.x -= this.tileSize;
+                        this.user.position.x -= 0
                     }
                     break;
-                case this.keys.arrowRight:
                 case this.keys.dRight:
-                     if (this.map[Math.round(this.user.position.y / this.tileSize)][Math.round(this.user.position.x / this.tileSize +1)].block) {
-                        this.user.position.x += 0;
-                    } else {
+                case this.keys.arrowRight:
+                    if (this.map[Math.round(this.user.position.y / this.tileSize)][Math.round(this.user.position.x / this.tileSize +1)].block==false) {
                         this.user.position.x += this.tileSize;
+                    } else {
+                        this.user.position.x -= 0
                     }
                     break;
                 default:
-                    break;*/
+                    break;
             }
             this.clearCanvas();
             this.renderCharacter();
