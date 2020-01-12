@@ -34,12 +34,14 @@ class Engine {
             water:"https://i.imgur.com/4BZGw0M.png"
         } ; 
 
-        this.images= {}
+        this.images= {},
+        this.map = []
     }
 
     async initialize() {
         await this.loadImages();
-        this.renderMap();
+        await this.loadMap();
+        await this.renderMap();
         this.renderEnvironment();
         this.renderCharacter();
     
@@ -66,14 +68,15 @@ class Engine {
             this.images[key]= image;
         }
     }
+    async loadMap() {
+        const response = await fetch("https://raw.githubusercontent.com/LucianABC/Jueguito/master/maps/city.json");
+        this.map = await response.json();
+    }
 
    async renderMap() {
-        const response = await fetch("./maps/city.json");
-        const result = await response.json();      
-
         for (let y = 0; y <= this.mapSize.y -1; y++) {
             for (let x = 0; x <= this.mapSize.x -1; x++) {
-                const tile = result[y][x];
+                const tile = this.map[y][x];
                 context.background.drawImage(this.images[tile.background],
                                   x * this.tileSize, 
                                   y * this.tileSize);
@@ -110,23 +113,70 @@ class Engine {
         document.addEventListener("keydown", e => { //e.keyCode nos va a dar el numero de la tecla que presionemos
             switch(e.keyCode){
                 case this.keys.arrowUp:
-                case this.keys.wUp:
-                    this.user.position.y -= this.tileSize;
+                    if (this.map[(Math.round(this.user.position.y / this.tileSize))-1][Math.round(this.user.position.x / this.tileSize)].block==false) {
+                        this.user.position.y -= this.tileSize;
+                    } else {
+                        this.user.position.y -= 0
+                    }
+                    break;
+                case this.keys.arrowDown:
+                    if (this.map[(Math.round(this.user.position.y / this.tileSize))+1][Math.round(this.user.position.x / this.tileSize)].block==false) {
+                        this.user.position.y += this.tileSize; 
+                    } else {
+                        this.user.position.y -= 0
+                    }
+                    break;
+                case this.keys.arrowLeft:
+                    if (this.map[Math.round(this.user.position.y / this.tileSize)][(Math.round(this.user.position.x / this.tileSize))-1].block==false) {
+                       
+                        this.user.position.x -= this.tileSize; 
+                    } else {
+                        this.user.position.x -= 0
+                    }
+                    break;
+                case this.keys.arrowRight:
+                    if (this.map[Math.round(this.user.position.y / this.tileSize)][(Math.round(this.user.position.x / this.tileSize))+1].block==false) {
+                        this.user.position.x += this.tileSize;
+                    } else {
+                        this.user.position.x -= 0
+                    }
+                    break;
+                default:
+                    break;/*
+                case this.keys.arrowUp:
+                case this.keys.wUp:  
+                    if (this.map[(this.user.position.y / this.tileSize - 1)][this.user.position.x / this.tileSize].block) {
+                        this.user.position.y -= 0;
+                    } else {
+                        this.user.position.y -= this.tileSize;
+                    }
                 break;
                 case this.keys.arrowDown:
                 case this.keys.sDown:
-                    this.user.position.y += this.tileSize;
+                    if (this.map[Math.round(this.user.position.y / this.tileSize + 1)][Math.round(this.user.position.x / this.tileSize)].block) {
+                        this.user.position.y += 0;
+                    } else {
+                        this.user.position.y += this.tileSize;
+                    }
                     break;
                 case this.keys.arrowLeft:
                 case this.keys.aLeft:
-                    this.user.position.x -= this.tileSize;
+                    if (this.map[Math.round(this.user.position.y / this.tileSize)][Math.round(this.user.position.x / this.tileSize -1)].block) {
+                        this.user.position.x -= 0;
+                    } else {
+                        this.user.position.x -= this.tileSize;
+                    }
                     break;
                 case this.keys.arrowRight:
                 case this.keys.dRight:
-                    this.user.position.x += this.tileSize;
+                     if (this.map[Math.round(this.user.position.y / this.tileSize)][Math.round(this.user.position.x / this.tileSize +1)].block) {
+                        this.user.position.x += 0;
+                    } else {
+                        this.user.position.x += this.tileSize;
+                    }
                     break;
                 default:
-                    break;
+                    break;*/
             }
             this.clearCanvas();
             this.renderCharacter();

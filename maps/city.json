@@ -1,354 +1,421 @@
 [
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         },
         {
-            "background": "grass"
+            "background": "grass",
+            "block": false
         }
     ],
     [
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         }
-    ],
-    [
+    ],[
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
+            "background": "water",
+            "block": true
         },
         {
-            "background": "water"
-        }
-    ],
-    [
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
-        },
-        {
-            "background": "water"
+            "background": "water",
+            "block": true
         }
     ]
 ]
