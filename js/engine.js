@@ -30,7 +30,7 @@ class Engine {
 
         this.urls= {
             grass:"https://i.imgur.com/fqG34pO.png",
-            character: "https://i.imgur.com/ucwvhlh.png",
+            character: "https://imagizer.imageshack.com/img921/348/TwD2LW.png",
             sign:"https://i.imgur.com/NXIjxr8.png",
             bush:"https://i.imgur.com/wIK2b9P.png",
             water:"https://i.imgur.com/4BZGw0M.png"
