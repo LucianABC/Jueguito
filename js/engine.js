@@ -12,7 +12,7 @@ class Engine {
             sDown:83,
             dRight: 68
         };
-        this.tileSize = 32;
+        this.tileSize = 50;
 
         this.mapSize = {
             y: 10,
@@ -81,7 +81,9 @@ class Engine {
                 const tile = this.map[y][x];
                 context.background.drawImage(this.images[tile.background],
                                   x * this.tileSize, 
-                                  y * this.tileSize);
+                                  y * this.tileSize,
+                                  this.images.character.height,
+                                  this.images.character.height);
             }
         }
     }
@@ -99,7 +101,8 @@ class Engine {
         this.context.foreground.drawImage(
             this.images.character,
             this.user.position.x,
-            this.user.position.y
+            this.user.position.y,
+             
         );
     }
     

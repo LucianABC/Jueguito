@@ -13,3 +13,8 @@ body {
 #foreground {
     position: absolute;
 }
+
+
+img {
+    border: 1px solid red;
+}
