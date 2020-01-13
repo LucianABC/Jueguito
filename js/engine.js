@@ -89,12 +89,12 @@ class Engine {
     }
 
     renderEnvironment() {
-        this.context.foreground.drawImage(this.images.bush, 150, 150);
-        this.context.foreground.drawImage(this.images.sign, 150, 20);
+        this.context.foreground.drawImage(this.images.bush, 300, 170);
+        this.context.foreground.drawImage(this.images.sign, 170, 20);
     
         this.context.foreground.font = "16pt Helvetica";
         this.context.foreground.fillStyle = "white";
-        this.context.foreground.fillText("Bienvenidx!", 170, 65);
+        this.context.foreground.fillText("Bienvenidx!", 190, 80);
     }
 
     renderCharacter() {
